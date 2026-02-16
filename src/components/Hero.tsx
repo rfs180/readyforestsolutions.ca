@@ -4,18 +4,20 @@ import { ChevronRight } from 'lucide-react';
 export default function Hero() {
   return (
     <div className="relative h-screen">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80")',
-        }}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       >
-        <div className="absolute inset-0 bg-dark/70" />
-      </div>
-      
+        <source src="/attached_assets/spruce.w.justin.mov" type="video/quicktime" />
+      </video>
+      <div className="absolute inset-0 bg-dark/70" />
+
       <div className="relative h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
-          <img src="/attached_assets/RFSlogo.jpeg" alt="Ready Forest Solutions" className="w-24 h-24 object-contain mx-auto mb-6" />
+          <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-24 h-24 object-contain mx-auto mb-6" />
           <h1 className="font-typewriter text-4xl md:text-6xl font-bold text-gold mb-6">
             Safe, Efficient, Eco-Friendly Tree Services in Alberta
           </h1>

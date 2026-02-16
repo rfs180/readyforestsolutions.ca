@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 text-gold mb-4">
-              <img src="/attached_assets/RFSlogo.jpeg" alt="Ready Forest Solutions" className="w-12 h-12 object-contain" />
+              <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-12 h-12 object-contain" />
               <span className="font-typewriter text-xl font-bold">Ready Forest</span>
             </div>
             <p className="font-sans text-sm">Professional tree services you can trust. Serving Alberta with pride since 2010.</p>
