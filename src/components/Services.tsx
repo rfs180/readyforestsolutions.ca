@@ -5,7 +5,8 @@ export default function Services() {
   return (
     <section className="py-20 bg-forest">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="font-typewriter text-3xl md:text-4xl font-bold text-center mb-16 text-gold">Our Services</h2>
+        <h2 className="font-typewriter text-3xl md:text-4xl font-bold text-center mb-4 text-gold">Core Services</h2>
+        <p className="text-center text-gold-light mb-16 max-w-2xl mx-auto font-sans text-lg">Outcome-focused solutions for every tree situation.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (

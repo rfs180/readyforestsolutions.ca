@@ -1,19 +1,17 @@
 import React from 'react';
 import Hero from './components/Hero';
-import Benefits from './components/Benefits';
+import TrustBar from './components/TrustBar';
 import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Process from './components/Process';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Benefits />
+      <TrustBar />
       <Services />
-      <Testimonials />
-      <Contact />
+      <Process />
       <Footer />
     </div>
   );
