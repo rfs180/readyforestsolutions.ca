@@ -3,19 +3,19 @@ import { ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen overflow-hidden">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/attached_assets/spruce.w.justin.mov" type="video/quicktime" />
       </video>
-      <div className="absolute inset-0 bg-dark/70" />
+      <div className="absolute inset-0 bg-dark/70 z-10" />
 
-      <div className="relative h-full flex items-center justify-center text-center px-4">
+      <div className="relative z-20 h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
           <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-24 h-24 object-contain mx-auto mb-6" />
           <h1 className="font-typewriter text-4xl md:text-6xl font-bold text-gold mb-6">
