@@ -6,6 +6,7 @@ export default function Footer() {
     name: '',
     neighborhood: '',
     problem: '',
+    photo: null as File | null,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -13,10 +14,15 @@ export default function Footer() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    setFormData(prev => ({ ...prev, photo: file }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    setFormData({ name: '', neighborhood: '', problem: '' });
+    setFormData({ name: '', neighborhood: '', problem: '', photo: null });
   };
 
   return (
@@ -36,7 +42,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-slate-700 p-8 rounded-lg">
+          <form onSubmit={handleSubmit} className="bg-slate-700 p-8 rounded-lg" id="contact-form">
             <h3 className="font-typewriter text-2xl font-bold text-gold mb-6">Quick Contact Form</h3>
             <div className="space-y-4">
               <input
@@ -66,6 +72,16 @@ export default function Footer() {
                 rows={4}
                 className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500 resize-none"
               />
+              <div>
+                <label className="text-gold-light text-sm font-sans mb-2 block">Upload a Photo of Your Tree (Optional)</label>
+                <input
+                  type="file"
+                  name="photo"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  className="w-full px-4 py-3 bg-dark text-gold-light border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:bg-orange-500 file:text-white file:font-semibold file:border-0 file:cursor-pointer hover:file:bg-orange-600"
+                />
+              </div>
               <button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-typewriter font-semibold transition-colors"

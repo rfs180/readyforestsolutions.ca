@@ -1,12 +1,10 @@
 import React from 'react';
-import { CheckCircle, Award, Shield, Star, Clock } from 'lucide-react';
+import { Star, Award, CheckCircle } from 'lucide-react';
 
 const trustItems = [
-  { icon: Award, label: 'Certified BC Faller' },
-  { icon: Shield, label: '$2M Liability Insurance' },
-  { icon: CheckCircle, label: 'WCB Alberta' },
   { icon: Star, label: 'HomeStars Verified' },
-  { icon: Clock, label: '24/7 Emergency Response' },
+  { icon: Award, label: 'ISA Member' },
+  { icon: CheckCircle, label: 'Fully Insured & WCB Compliant' },
 ];
 
 export default function TrustBar() {
@@ -16,11 +14,11 @@ export default function TrustBar() {
         <p className="text-center text-gold text-sm md:text-base font-typewriter mb-6 font-semibold">
           Why trust a weekend warrior when you can hire a precision faller?
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {trustItems.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <item.icon className="w-8 h-8 text-orange-500 mb-2" />
-              <p className="text-gold-light text-xs md:text-sm font-sans">{item.label}</p>
+              <item.icon className="w-10 h-10 text-orange-500 mb-3" />
+              <p className="text-gold-light text-sm md:text-base font-sans font-semibold">{item.label}</p>
             </div>
           ))}
         </div>
