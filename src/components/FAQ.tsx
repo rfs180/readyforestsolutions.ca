@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 const faqItems = [
   {
     question: 'How much does tree removal cost?',
-    answer: 'Tree removal costs typically range from $400 to $900 depending on the size, species, location, and complexity of the removal. Tight-quarter removals may cost more due to the specialized expertise required. We provide free, transparent quotes with no hidden fees after assessing your specific situation.',
+    answer: 'Tree removal costs typically range from $400 to $1500 depending on the size, species, location, and complexity of the removal. Tight-quarter removals may cost more due to the specialized expertise required. We provide free, transparent quotes with no hidden fees after assessing your specific situation.',
   },
   {
     question: 'Do I need a permit to remove a tree on my private property?',
