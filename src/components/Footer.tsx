@@ -19,22 +19,18 @@ export default function Footer() {
     setFormData(prev => ({ ...prev, photo: file }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const formDataObj = new FormData();
     formDataObj.append('name', formData.name);
     formDataObj.append('neighborhood', formData.neighborhood);
     formDataObj.append('problem', formData.problem);
-    if (formData.photo) {
-      formDataObj.append('photo', formData.photo);
-    }
-
-    fetch('mailto:jeff@readyforestsolutions.ca?subject=Tree Service Inquiry from ' + formData.name + '&body=' + encodeURIComponent('Name: ' + formData.name + '\n\nNeighborhood: ' + formData.neighborhood + '\n\nProblem: ' + formData.problem), {
-      method: 'GET',
-    }).catch(() => {
-      window.location.href = 'mailto:jeff@readyforestsolutions.ca?subject=Tree Service Inquiry from ' + formData.name + '&body=' + encodeURIComponent('Name: ' + formData.name + '\n\nNeighborhood: ' + formData.neighborhood + '\n\nProblem: ' + formData.problem);
+    if (formData.photo) formDataObj.append('photo', formData.photo);
+    await fetch('https://formspree.io/f/xvzwgjoy', {
+      method: 'POST',
+      body: formDataObj,
+      headers: { 'Accept': 'application/json' }
     });
-
     setFormData({ name: '', neighborhood: '', problem: '', photo: null });
   };
 
