@@ -14,6 +14,18 @@ const faqItems = [
     question: 'What\'s the difference between stump grinding and stump removal?',
     answer: 'Stump removal extracts the entire root system below ground level, which is more intensive and costly. Stump grinding grinds the stump down to ground level (or below) and chips it into mulch, which is typically more affordable and leaves your yard ready for landscaping. Both options leave your property clean—we recommend grinding for most residential situations.',
   },
+  {
+    question: 'Are you insured and WCB covered?',
+    answer: 'Yes. Ready Forest Solutions carries full liability insurance and is WCB covered. This protects you, your property, and our crew throughout every job. We are happy to provide proof of insurance upon request before any work begins.',
+  },
+  {
+    question: 'How quickly can you respond to an emergency?',
+    answer: 'We are available 24/7 for emergency situations such as storm-damaged trees, fallen limbs, or hazardous leaning trees. For urgent calls, text a photo of your tree to 1-(672)-968-0643 and we will assess the situation and get back to you as quickly as possible — often same day.',
+  },
+  {
+    question: 'Can I get a same-day estimate?',
+    answer: 'In most cases, yes. Text a photo of your tree to 1-(672)-968-0643 for a fast estimate, or fill out our Quick Contact Form. For straightforward jobs, we can often provide a quote on the spot. On-site assessments can typically be scheduled within 24–48 hours.',
+  },
 ];
 
 export default function FAQ() {
@@ -25,7 +37,6 @@ export default function FAQ() {
         <h2 className="font-typewriter text-3xl md:text-4xl font-bold text-center mb-16 text-gold">
           Frequently Asked Questions
         </h2>
-
         <div className="space-y-4">
           {faqItems.map((item, index) => (
             <div key={index} className="border border-gold/20 rounded-lg overflow-hidden bg-slate-700/30">
