@@ -20,11 +20,11 @@ const faqItems = [
   },
   {
     question: 'How quickly can you respond to an emergency?',
-    answer: 'We are available 24/7 for emergency situations such as storm-damaged trees, fallen limbs, or hazardous leaning trees. For urgent calls, text a photo of your tree to 1-(672)-968-0643 and we will assess the situation and get back to you as quickly as possible — often same day.',
+    answer: 'We are available 24/7 for emergency situations such as storm-damaged trees, fallen limbs, or hazardous leaning trees. For urgent calls, call or text a photo of your tree to 1-(672)-968-0643 and we will assess the situation and get back to you Immediatlly.',
   },
   {
     question: 'Can I get a same-day estimate?',
-    answer: 'In most cases, yes. Text a photo of your tree to 1-(672)-968-0643 for a fast estimate, or fill out our Quick Contact Form. For straightforward jobs, we can often provide a quote on the spot. On-site assessments can typically be scheduled within 24–48 hours.',
+    answer: 'In most cases, yes. Text a photo of your tree to 1-(672)-968-0643 for a fast estimate, or fill out our Quick Contact Form. For straightforward jobs, we can often provide a quote on the spot. On-site assessments can typically be scheduled within 24 hours.',
   },
 ];
 
