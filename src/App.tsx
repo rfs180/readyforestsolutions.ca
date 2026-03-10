@@ -2,6 +2,7 @@ import React from 'react';
 import StickyHeader from './components/StickyHeader';
 import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
+import EmergencyStorm from './components/EmergencyStorm'; // ← NEW
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Process from './components/Process';
@@ -14,6 +15,7 @@ function App() {
       <StickyHeader />
       <Hero />
       <TrustBar />
+      <EmergencyStorm />  {/* ← NEW */}
       <Services />
       <WhyUs />
       <Process />
