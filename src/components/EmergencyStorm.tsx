@@ -108,7 +108,7 @@ export default function EmergencyStorm() {
             </p>
           </div>
 
-          
+          <a
             href="tel:+16729680643"
             style={{
               backgroundColor: theme.colors.primary.green,
