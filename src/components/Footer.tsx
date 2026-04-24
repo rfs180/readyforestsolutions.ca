@@ -20,19 +20,42 @@ export default function Footer() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const formDataObj = new FormData();
-    formDataObj.append('name', formData.name);
-    formDataObj.append('neighborhood', formData.neighborhood);
-    formDataObj.append('problem', formData.problem);
-    if (formData.photo) formDataObj.append('photo', formData.photo);
-    await fetch('https://formspree.io/f/xvzwgjoy', {
+  e.preventDefault();
+
+  const formDataObj = new FormData();
+  formDataObj.append('name', formData.name);
+  formDataObj.append('neighborhood', formData.neighborhood);
+  formDataObj.append('problem', formData.problem);
+  if (formData.photo) formDataObj.append('photo', formData.photo);
+
+  try {
+    const response = await fetch('https://formspree.io/f/xvzwgjoy', {
       method: 'POST',
       body: formDataObj,
       headers: { 'Accept': 'application/json' }
     });
-    setFormData({ name: '', neighborhood: '', problem: '', photo: null });
-  };
+
+    if (response.ok) {
+      // 🔥 GOOGLE ANALYTICS EVENT
+      if (window.gtag) {
+        window.gtag('event', 'quote_submitted', {
+          event_category: 'engagement',
+          event_label: 'footer_contact_form'
+        });
+      }
+
+      // reset form AFTER success
+      setFormData({ name: '', neighborhood: '', problem: '', photo: null });
+
+      console.log('Form submitted successfully');
+    } else {
+      console.error('Form submission failed');
+    }
+
+  } catch (error) {
+    console.error('Error submitting form:', error);
+  }
+};
 
   return (
     <footer className="bg-dark text-gold-light">
