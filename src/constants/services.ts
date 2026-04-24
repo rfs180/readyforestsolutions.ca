@@ -3,7 +3,7 @@ import type { Service } from '../types';
 export const services: Service[] = [
   {
     title: 'Tight-Quarter Takedowns',
-    image: '/attached_assets/before_after_RFS_cynthia.jpg',
+    image: '/attached_assets/me_cynthia_side_tree.jpeg',
     description: 'We remove massive trees from narrow backyards without touching your fence or your neighbor\'s roof.',
   },
   {
