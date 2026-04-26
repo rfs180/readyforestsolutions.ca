@@ -4,6 +4,8 @@ import { Facebook, Twitter, Instagram, MessageSquare } from 'lucide-react';
 export default function Footer() {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
+    phone: '',
     neighborhood: '',
     problem: '',
     photo: null as File | null,
@@ -20,42 +22,37 @@ export default function Footer() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const formDataObj = new FormData();
-  formDataObj.append('name', formData.name);
-  formDataObj.append('neighborhood', formData.neighborhood);
-  formDataObj.append('problem', formData.problem);
-  if (formData.photo) formDataObj.append('photo', formData.photo);
+    const formDataObj = new FormData();
+    formDataObj.append('name', formData.name);
+    formDataObj.append('email', formData.email);
+    formDataObj.append('phone', formData.phone);
+    formDataObj.append('neighborhood', formData.neighborhood);
+    formDataObj.append('problem', formData.problem);
+    if (formData.photo) formDataObj.append('photo', formData.photo);
 
-  try {
-    const response = await fetch('https://formspree.io/f/xvzwgjoy', {
-      method: 'POST',
-      body: formDataObj,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/xvzwgjoy', {
+        method: 'POST',
+        body: formDataObj,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
-      // 🔥 GOOGLE ANALYTICS EVENT
-      if (window.gtag) {
-        window.gtag('event', 'quote_submitted', {
-          event_category: 'engagement',
-          event_label: 'footer_contact_form'
-        });
+      if (response.ok) {
+        if (window.gtag) {
+          window.gtag('event', 'quote_submitted', {
+            event_category: 'engagement',
+            event_label: 'footer_contact_form'
+          });
+        }
+        setFormData({ name: '', email: '', phone: '', neighborhood: '', problem: '', photo: null });
+        alert('Estimate request sent!');
       }
-
-      // reset form AFTER success
-      setFormData({ name: '', neighborhood: '', problem: '', photo: null });
-
-      console.log('Form submitted successfully');
-    } else {
-      console.error('Form submission failed');
+    } catch (error) {
+      console.error('Error submitting form:', error);
     }
-
-  } catch (error) {
-    console.error('Error submitting form:', error);
-  }
-};
+  };
 
   return (
     <footer className="bg-dark text-gold-light">
@@ -87,6 +84,23 @@ export default function Footer() {
                 className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500"
               />
               <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500"
+              />
+              <input
                 type="text"
                 name="neighborhood"
                 placeholder="Neighborhood (Edmonton/St. Albert)"
@@ -105,13 +119,13 @@ export default function Footer() {
                 className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500 resize-none"
               />
               <div>
-                <label className="text-gold-light text-sm font-sans mb-2 block">Upload a Photo of Your Tree (Optional)</label>
+                <label className="text-gold-light text-sm font-sans mb-2 block">Upload a Photo (Optional)</label>
                 <input
                   type="file"
                   name="photo"
                   accept="image/*"
                   onChange={handleFileChange}
-                  className="w-full px-4 py-3 bg-dark text-gold-light border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:bg-orange-500 file:text-white file:font-semibold file:border-0 file:cursor-pointer hover:file:bg-orange-600"
+                  className="w-full px-4 py-3 bg-dark text-gold-light border border-gold/20 rounded-lg font-sans file:mr-4 file:py-2 file:px-4 file:rounded-lg file:bg-orange-500 file:text-white file:border-0 cursor-pointer"
                 />
               </div>
               <button
@@ -132,44 +146,34 @@ export default function Footer() {
               <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-12 h-12 object-contain" />
               <span className="font-typewriter text-xl font-bold">Ready Forest</span>
             </div>
-            <p className="font-sans text-sm">Professional tree services you can trust. Serving Edmonton & St. Albert.</p>
+            <p className="font-sans text-sm">Professional tree services serving Edmonton & St. Albert.</p>
           </div>
-
           <div>
             <h3 className="font-typewriter text-gold font-semibold mb-4">Services</h3>
             <ul className="space-y-2 font-sans text-sm">
-              <li><a href="#" className="hover:text-gold transition-colors">Tree Removal</a></li>
-              <li><a href="#" className="hover:text-gold transition-colors">Hazard Assessment</a></li>
-              <li><a href="#" className="hover:text-gold transition-colors">Elm Pruning</a></li>
-              <li><a href="#" className="hover:text-gold transition-colors">Stump Grinding</a></li>
+              <li>Tree Removal</li>
+              <li>Hazard Assessment</li>
+              <li>Elm Pruning</li>
+              <li>Stump Grinding</li>
             </ul>
           </div>
-
           <div>
-            <h3 className="font-typewriter text-gold font-semibold mb-4">Emergency Service</h3>
-            <div className="font-sans text-sm space-y-2">
+            <h3 className="font-typewriter text-gold font-semibold mb-4">Emergency</h3>
+            <div className="font-sans text-sm">
               <p>Available 24/7</p>
-              <p><a href="tel:1-672-968-0643" className="text-orange-500 hover:text-orange-400 font-semibold">1-672-968-0643</a></p>
+              <p className="text-orange-500 font-semibold">1-672-968-0643</p>
             </div>
           </div>
-
           <div>
             <h3 className="font-typewriter text-gold font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/rfs1800" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a href="https://x.com/JeffReady4" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="https://www.instagram.com/jeffrey.a.ready/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                <Instagram className="w-6 h-6" />
-              </a>
+              <Facebook className="w-6 h-6" />
+              <Twitter className="w-6 h-6" />
+              <Instagram className="w-6 h-6" />
             </div>
           </div>
         </div>
-
-        <div className="border-t border-gold/20 pt-8 text-sm text-center font-typewriter">
+        <div className="border-t border-gold/20 pt-8 text-sm text-center font-typewriter text-gold-light/50">
           <p>© 2024 Ready Forest Solutions. All rights reserved.</p>
         </div>
       </div>
