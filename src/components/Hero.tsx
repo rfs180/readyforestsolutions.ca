@@ -11,7 +11,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/attached_assets/spruce.w.justin.mov" type="video/quicktime" />
+        <source src="/attached_assets/spruce_w_justin.mov" type="video/quicktime" />
       </video>
       <div className="absolute inset-0 bg-dark/70 z-10" />
 
