@@ -40,10 +40,9 @@ export default function Footer() {
       });
 
       if (response.ok) {
-        if (window.gtag) {
-          window.gtag('event', 'quote_submitted', {
-            event_category: 'engagement',
-            event_label: 'footer_contact_form'
+        if ((window as any).gtag) {
+          (window as any).gtag('event', 'quote_submitted', {
+            form_location: 'footer_contact_form'
           });
         }
         setFormData({ name: '', email: '', phone: '', neighborhood: '', problem: '', photo: null });
