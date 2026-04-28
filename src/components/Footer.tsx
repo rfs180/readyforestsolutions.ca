@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, MessageSquare } from 'lucide-react';
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 export default function Footer() {
   const [formData, setFormData] = useState({
     name: '',
