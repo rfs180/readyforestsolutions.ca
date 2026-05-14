@@ -14,17 +14,11 @@ export default function Footer() {
     phone: '',
     neighborhood: '',
     problem: '',
-    photo: null as File | null,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null;
-    setFormData(prev => ({ ...prev, photo: file }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,7 +30,6 @@ export default function Footer() {
     formDataObj.append('phone', formData.phone);
     formDataObj.append('neighborhood', formData.neighborhood);
     formDataObj.append('problem', formData.problem);
-    if (formData.photo) formDataObj.append('photo', formData.photo);
 
     try {
       const response = await fetch('https://formspree.io/f/xvzwgjoy', {
@@ -123,16 +116,6 @@ export default function Footer() {
                 rows={4}
                 className="w-full px-4 py-3 bg-dark text-gold-light placeholder-gold-light/50 border border-gold/20 rounded-lg font-sans focus:outline-none focus:border-orange-500 resize-none"
               />
-              <div>
-                <label className="text-gold-light text-sm font-sans mb-2 block">Upload a Photo (Optional)</label>
-                <input
-                  type="file"
-                  name="photo"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="w-full px-4 py-3 bg-dark text-gold-light border border-gold/20 rounded-lg font-sans file:mr-4 file:py-2 file:px-4 file:rounded-lg file:bg-orange-500 file:text-white file:border-0 cursor-pointer"
-                />
-              </div>
               <button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-typewriter font-semibold transition-colors"
