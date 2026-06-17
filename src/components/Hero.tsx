@@ -19,10 +19,10 @@ export default function Hero() {
         <div className="max-w-4xl">
           <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-24 h-24 object-contain mx-auto mb-6" />
           <h1 className="font-typewriter text-4xl md:text-6xl font-bold text-gold mb-6">
-            Professional Tree Removal & Service in Edmonton
+            Edmonton Tree Removal & Tree Services
           </h1>
           <p className="font-typewriter text-lg md:text-xl text-gold-light mb-8 max-w-2xl mx-auto">
-            Ready Forest Solutions provides expert, high-risk technical tree dismantling and certified clearing services across the Edmonton area.
+            Ready Forest Solutions delivers certified, expert technical tree removal and comprehensive tree services across the Edmonton region.
           </p>
           <a href="#contact-form" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center gap-2 transition-colors font-typewriter">
             Get My Free Quote Today
