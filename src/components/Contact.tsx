@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-typewriter text-3xl md:text-4xl font-bold mb-4 text-gold">Let's Get Started!</h2>
-          <p className="font-typewriter text-xl text-gold-light">Reach out today for a consultation or free estimate.</p>
+          <p className="font-typewriter text-xl text-gold-light">Reach out today for a free estimate.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -28,7 +28,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-typewriter font-semibold text-lg text-gold">Email</h3>
-                <p className="text-gold-light">jeff@readyforestsolutions.ca</p>
+                <p className="text-gold-light">readyfsjeff@gmail.com</p>
               </div>
             </div>
 
