@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="max-w-4xl">
           <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-24 h-24 object-contain mx-auto mb-6" />
           <h1 className="font-typewriter text-4xl md:text-6xl font-bold text-gold mb-6">
-            Tree Removal - Edmonton - Tree Services - Ready Forest Solutions
+            BEST - Tree Removal - Edmonton - Tree Services - Ready Forest Solutions
           </h1>
           <p className="font-typewriter text-lg md:text-xl text-gold-light mb-8 max-w-2xl mx-auto">
             Ready Forest Solutions delivers certified, expert technical tree removal and comprehensive tree services across the Edmonton region.
