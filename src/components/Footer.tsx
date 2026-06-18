@@ -138,7 +138,7 @@ export default function Footer() {
             {/* Explicit Local SEO NAP Text Injection */}
             <div className="font-sans text-xs text-gold-light/70 space-y-1 border-l-2 border-orange-500 pl-3">
               <p className="font-semibold text-gold-light">Ready Forest Solutions</p>
-              <p>3-13570 38 St NW</p>
+              <p>13570 38 St NW</p>
               <p>Edmonton, AB T5A 2W7</p>
               <p>Phone: 1-672-968-0643</p>
             </div>
@@ -147,7 +147,7 @@ export default function Footer() {
             <ul className="space-y-2 font-sans text-sm">
               <li>Tree Removal</li>
               <li>Hazard Assessment</li>
-              <li>Elm Pruning</li>
+              <li>Tree Services</li>
               <li>Stump Grinding</li>
             </ul>
           </div>
