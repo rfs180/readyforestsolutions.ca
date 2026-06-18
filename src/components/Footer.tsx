@@ -132,9 +132,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 text-gold mb-4">
               <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-12 h-12 object-contain" />
-              <span className="font-typewriter text-xl font-bold">Ready Forest</span>
+              <span className="font-typewriter text-xl font-bold">Ready Forest Solutions</span>
             </div>
-            <p className="font-sans text-sm mb-3">Professional tree services serving Edmonton & St. Albert.</p>
+            <p className="font-sans text-sm mb-3">BEST - Tree Removal - Edmonton - Tree Services - Ready Forest Solutions</p>
             {/* Explicit Local SEO NAP Text Injection */}
             <div className="font-sans text-xs text-gold-light/70 space-y-1 border-l-2 border-orange-500 pl-3">
               <p className="font-semibold text-gold-light">Ready Forest Solutions</p>
