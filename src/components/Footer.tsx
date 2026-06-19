@@ -44,7 +44,7 @@ export default function Footer() {
             form_location: 'footer_contact_form'
           });
         }
-        setFormData({ name: '', email: '', phone: '', neighborhood: '', problem: '', photo: null });
+        setFormData({ name: '', email: '', phone: '', neighborhood: '', problem: '' });
         alert('Estimate request sent!');
       }
     } catch (error) {
@@ -132,9 +132,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 text-gold mb-4">
               <img src="/attached_assets/RFSlogo.png" alt="Ready Forest Solutions" className="w-12 h-12 object-contain" />
-              <span className="font-typewriter text-xl font-bold">Ready Forest Solutions</span>
+              <span className="font-typewriter text-xl font-bold">Ready Forest</span>
             </div>
-            <p className="font-sans text-sm mb-3">BEST - Tree Removal - Edmonton - Tree Services - Ready Forest Solutions</p>
+            <p className="font-sans text-sm mb-3">Professional tree services serving Edmonton & St. Albert.</p>
             {/* Explicit Local SEO NAP Text Injection */}
             <div className="font-sans text-xs text-gold-light/70 space-y-1 border-l-2 border-orange-500 pl-3">
               <p className="font-semibold text-gold-light">Ready Forest Solutions</p>
@@ -142,12 +142,13 @@ export default function Footer() {
               <p>Edmonton, AB T5A 2W7</p>
               <p>Phone: 1-672-968-0643</p>
             </div>
+          </div>
           <div>
             <h3 className="font-typewriter text-gold font-semibold mb-4">Services</h3>
             <ul className="space-y-2 font-sans text-sm">
               <li>Tree Removal</li>
               <li>Hazard Assessment</li>
-              <li>Tree Services</li>
+              <li>Elm Pruning</li>
               <li>Stump Grinding</li>
             </ul>
           </div>
