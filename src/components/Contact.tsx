@@ -11,38 +11,56 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
-                <Phone className="w-6 h-6" />
+          {/* Left Column: Contact Details & Live Map */}
+          <div className="space-y-8 flex flex-col justify-between">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-typewriter font-semibold text-lg text-gold">Phone</h3>
+                  <p className="text-gold-light">1+ (672) 968-0643</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-typewriter font-semibold text-lg text-gold">Phone</h3>
-                <p className="text-gold-light">1+ (672) 968-0643</p>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-typewriter font-semibold text-lg text-gold">Email</h3>
+                  <p className="text-gold-light">readyfsjeff@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-typewriter font-semibold text-lg text-gold">Service Area</h3>
+                  <p className="text-gold-light">Edmonton & Surrounding Areas, AB</p>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
-                <Mail className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-typewriter font-semibold text-lg text-gold">Email</h3>
-                <p className="text-gold-light">readyfsjeff@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-gold">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-typewriter font-semibold text-lg text-gold">Location</h3>
-                <p className="text-gold-light">Edmonton, Alberta</p>
-              </div>
+            {/* Embedded Google Map */}
+            <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden border border-gold/20 shadow-lg mt-4">
+              <iframe
+                title="Ready Forest Solutions Service Area"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151647.71212852237!2d-113.67727926177894!3d53.54620573909181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580de5553%3A0x350e5a2f16b679f2!2sEdmonton%2C%20AB!5e0!3m2!1sen!2sca!4v1718748000000!5m2!1sen!2sca"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "grayscale(1) invert(0.95) contrast(0.9)" }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
+          {/* Right Column: Lead Form */}
           <form
             action="https://formspree.io/f/your-id"
             method="POST"
