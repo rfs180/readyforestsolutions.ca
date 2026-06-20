@@ -162,7 +162,7 @@ export default function Footer() {
           <div>
             <h3 className="font-typewriter text-gold font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <Facebook className="w-6 h-6" />
+              <Facebook className="https://www.facebook.com/rfs1800" />
               <Twitter className="w-6 h-6" />
               <Instagram className="w-6 h-6" />
             </div>
