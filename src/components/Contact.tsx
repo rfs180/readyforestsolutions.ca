@@ -49,15 +49,15 @@ export default function Contact() {
             <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden border border-gold/20 shadow-lg mt-4">
               <iframe
                 title="Ready Forest Solutions Service Area"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151647.71212852237!2d-113.67727926177894!3d53.54620573909181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580de5553%3A0x350e5a2f16b679f2!2sEdmonton%2C%20AB!5e0!3m2!1sen!2sca!4v1718748000000!5m2!1sen!2sca"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2367.858799685509!2d-113.40008709807739!3d53.59598102590787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a03ceab19c0f59%3A0x31cf4b694c375b0b!2s13570%2038%20St%20NW%2C%20Edmonton%2C%20AB%20T5A%202W7!5e0!3m2!1sen!2sca!4v1781937373285!5m2!1sen!2sca"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "grayscale(1) invert(0.95) contrast(0.9)" }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+             />
+           </div>
           </div>
 
           {/* Right Column: Lead Form */}
