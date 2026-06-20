@@ -165,10 +165,10 @@ export default function Footer() {
               <a href="https://www.facebook.com/rfs1800" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook className="w-6 h-6 hover:text-orange-500 transition-colors" />
               </a>
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a href="https://twitter.com/@JeffReady4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <Twitter className="w-6 h-6 hover:text-orange-500 transition-colors" />
               </a>
-              <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/jeffrey.a.ready" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="w-6 h-6 hover:text-orange-500 transition-colors" />
               </a>
             </div>
