@@ -162,9 +162,15 @@ export default function Footer() {
           <div>
             <h3 className="font-typewriter text-gold font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <Facebook className="https://www.facebook.com/rfs1800" />
-              <Twitter className="w-6 h-6" />
-              <Instagram className="w-6 h-6" />
+              <a href="https://www.facebook.com/rfs1800" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook className="w-6 h-6 hover:text-orange-500 transition-colors" />
+              </a>
+              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Twitter className="w-6 h-6 hover:text-orange-500 transition-colors" />
+              </a>
+              <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram className="w-6 h-6 hover:text-orange-500 transition-colors" />
+              </a>
             </div>
           </div>
         </div>
