@@ -56,13 +56,13 @@ export default function Contact() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-             />
-           </div>
+              />
+            </div>
           </div>
 
           {/* Right Column: Lead Form */}
           <form
-            action="https://formspree.io/f/your-id"
+            action="https://formspree.io/f/xvzwgjoy"
             method="POST"
             className="space-y-6"
           >
